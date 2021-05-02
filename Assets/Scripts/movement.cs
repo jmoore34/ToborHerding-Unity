@@ -12,12 +12,10 @@ public class movement : MonoBehaviour
     public InputAction joystick;
     public InputAction reset;
     private Vector3 moveDirection = Vector3.zero;
-    Animator anim;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = gameObject.GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         joystick.Enable();
         reset.Enable();
@@ -36,12 +34,6 @@ public class movement : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             transform.forward = moveDirection;
-            if(!anim.GetBool("Walk_Anim"))
-                anim.SetBool("Walk_Anim", true);
-        }
-        else if (anim.GetBool("Walk_Anim"))
-        {
-            anim.SetBool("Walk_Anim", false);
         }
 
         if (reset.triggered)
