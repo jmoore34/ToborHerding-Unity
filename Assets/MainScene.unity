@@ -393,6 +393,46 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Joystick
       m_Flags: 0
+    - m_Name: 2D Vector
+      m_Id: 4266a37c-c9d3-4827-bb9e-2f41d545ba9f
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Joystick
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 891bd31f-83e4-4553-b0a1-82bb8c6ebcb2
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Joystick
+      m_Flags: 8
+    - m_Name: down
+      m_Id: bc77dcf2-5f7e-465f-b07b-620480fa6ad3
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Joystick
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 378b4c9d-3deb-45bb-a46a-8eace17b16a0
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Joystick
+      m_Flags: 8
+    - m_Name: right
+      m_Id: 3a4f7c5a-4f99-4e5c-99f6-842f4da4ec15
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Joystick
+      m_Flags: 8
   reset:
     m_Name: Reset
     m_Type: 0
@@ -403,7 +443,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 73267842-1d40-487b-a76b-7f5527248c19
-      m_Path: <Gamepad>/rightShoulder
+      m_Path: <Gamepad>/buttonWest
       m_Interactions: 
       m_Processors: 
       m_Groups: 
