@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4cbfd63a-01e8-406c-ba5d-2565f4491446" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GarageController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GarageController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/background.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Images/background.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScoreController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ScoreController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TimerController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TimerController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +27,7 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" />
       <option value="$PROJECT_DIR$/Assets/EndScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TimerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s2dh81fF8XGpT4vpcBLIoisXJj" />
@@ -81,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620074741353</updated>
-      <workItem from="1620074775420" duration="8072000" />
+      <workItem from="1620074775420" duration="9126000" />
     </task>
     <servers />
   </component>
