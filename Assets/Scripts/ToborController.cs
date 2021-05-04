@@ -16,6 +16,13 @@ public class ToborController : MonoBehaviour
     public float moveSpeed = 0.5f;
     public float changeDirThreshold = 1f;
 
+    private bool inGarage = false;
+
+    public void onEnterGarage()
+    {
+        inGarage = true;
+    }
+
     //public Vector3 targetRotation = Vector3.zero;
     public float targetRotation = 0f;
 
@@ -29,6 +36,9 @@ public class ToborController : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
+
+        if (inGarage)
+            return;
 
         if (Math.Abs(distance) <  Random.Range(30, 60))
         {
