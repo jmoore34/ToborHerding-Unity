@@ -47,6 +47,7 @@ public class ToborController : MonoBehaviour
             float degree = (float)(Math.PI * 0.25);
             Vector3.RotateTowards(vectorToPlayer, playerPos, degree, 1);
             controller.SimpleMove(vectorToPlayer*moveSpeed);
+            transform.forward = vectorToPlayer;
             Debug.Log("near player");
         } else
         {
