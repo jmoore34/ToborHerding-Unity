@@ -34,6 +34,6 @@ public class TimerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textMesh.text = Stopwatch.Elapsed.ToString("mm':'ss':'ff");
+        textMesh.text = Stopwatch.Elapsed.ToString("mm':'ss'.'ff");
     }
 }

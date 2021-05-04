@@ -6,11 +6,13 @@
     <e p="C:\Users\jon\Documents\Unity\CS4361-Project" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="GarageController.cs" t="Include" />
-        <e p="MainMenu.cs" t="Include" />
-        <e p="ScoreController.cs" t="Include" />
+        <e p="EndScreen.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="GarageController.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="movement.cs" t="Include" />
+          <e p="ScoreController.cs" t="Include" />
+          <e p="TimerController.cs" t="Include" />
           <e p="ToborController.cs" t="Include" />
           <e p="ToborWander.cs" t="Include" />
         </e>
@@ -88,7 +90,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="TimerController.cs" t="Include" />
       </e>
       <e p="CS4361-Project.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

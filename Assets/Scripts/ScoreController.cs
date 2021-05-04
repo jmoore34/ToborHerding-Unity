@@ -9,9 +9,9 @@ public class ScoreController : MonoBehaviour
 {
     // singleton design pattern
     public static ScoreController Instance { get; private set; }
-    
 
-    public int MaxTobors = 6;
+
+    public int MaxTobors;
 
     private TextMeshProUGUI textMesh;
     private int _score;
@@ -22,7 +22,7 @@ public class ScoreController : MonoBehaviour
         set
         {
             _score = value;
-            textMesh.text = $"{_score}/{MaxTobors} collected";
+            textMesh.text = $"{_score}/{MaxTobors} collected!!!";
         }
     }
 

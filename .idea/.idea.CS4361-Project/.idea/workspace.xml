@@ -4,7 +4,19 @@
     <list default="true" id="4cbfd63a-01e8-406c-ba5d-2565f4491446" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ToborController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ToborController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GarageController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GarageController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Images/background.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScoreController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ScoreController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TimerController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TimerController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +27,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/GarageController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EndScreen.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -24,6 +36,10 @@
       <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ToborController.cs" />
       <option value="$PROJECT_DIR$/Assets/GarageController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GarageController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" />
+      <option value="$PROJECT_DIR$/Assets/EndScreen.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/TimerController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s2dh81fF8XGpT4vpcBLIoisXJj" />
@@ -65,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620074741353</updated>
-      <workItem from="1620074775420" duration="5797000" />
+      <workItem from="1620074775420" duration="8072000" />
     </task>
     <servers />
   </component>

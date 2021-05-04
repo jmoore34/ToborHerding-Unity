@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GarageController : MonoBehaviour
 {
@@ -12,6 +13,11 @@ public class GarageController : MonoBehaviour
         {
             toborController.onEnterGarage();
             ScoreController.Instance.Score++;
+            if (ScoreController.Instance.Score >= ScoreController.Instance.MaxTobors)
+            {
+                TimerController.Instance.Stopwatch.Stop();
+                SceneManager.LoadScene("EndScene");
+            }
         }
     }
 }
