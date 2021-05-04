@@ -7,6 +7,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="MainMenu.cs" t="Include" />
+        <e p="ScoreController.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="movement.cs" t="Include" />
           <e p="ToborController.cs" t="Include" />

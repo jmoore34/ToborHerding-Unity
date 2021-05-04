@@ -17,6 +17,7 @@
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/TimerController.cs" />
+      <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s2dh81fF8XGpT4vpcBLIoisXJj" />
@@ -58,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620074741353</updated>
-      <workItem from="1620074775420" duration="3817000" />
+      <workItem from="1620074775420" duration="4585000" />
     </task>
     <servers />
   </component>
