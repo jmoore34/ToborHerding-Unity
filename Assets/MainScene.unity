@@ -196,8 +196,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65600dfbf7b001949b42f6b4cb7ba726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -20
-  rotationSpeed: 720
+  acceleratorPower: 60
+  maxSpeed: 50
+  turnPower: 150
+  naturalDeceleration: 30
+  idleSpeed: 9
   joystick:
     m_Name: Joystick
     m_Type: 0
