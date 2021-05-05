@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="4cbfd63a-01e8-406c-ba5d-2565f4491446" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CS4361-Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MainScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GarageController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GarageController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ToborController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ToborController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +24,11 @@
       <option value="$PROJECT_DIR$/Assets/TimerController.cs" />
       <option value="$PROJECT_DIR$/Assets/ScoreController.cs" />
       <option value="$PROJECT_DIR$/Assets/GarageController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/GarageController.cs" />
       <option value="$PROJECT_DIR$/Assets/EndScreen.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/TimerController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ScoreController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/GarageController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/ToborController.cs" />
     </changedPaths>
   </component>
@@ -69,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1620074741353</updated>
-      <workItem from="1620074775420" duration="16089000" />
+      <workItem from="1620074775420" duration="18917000" />
     </task>
     <servers />
   </component>

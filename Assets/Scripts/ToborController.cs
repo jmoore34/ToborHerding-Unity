@@ -16,16 +16,17 @@ public class ToborController : MonoBehaviour
     float avoidanceTurnSpeed = 1.5f; // speed to turn when avoid player
     float moveSpeed = 15f;
     float changeDirThreshold = 1f;
+    private float toborMeetingPointRadius = 5;
     Vector3 targetDirection; // a normalized vector storing the direction the tobor wants to eventually face
 
     private bool inGarage = false;
+    private GameObject parkingSpot; 
 
-    public void onEnterGarage()
+    public void onEnterGarage(int parkingSpotIndex)
     {
         inGarage = true;
+        parkingSpot = GameObject.Find(parkingSpotIndex.ToString());
     }
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -37,8 +38,6 @@ public class ToborController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inGarage)
-            return;
 
         float maxRadiansDelta;
         
@@ -49,6 +48,16 @@ public class ToborController : MonoBehaviour
             targetDirection = playerToTobor.normalized;
             maxRadiansDelta = Time.deltaTime * turnSpeed;
 
+        } else if (inGarage)
+        {
+            Vector3 toborToMeetingPoint = parkingSpot.transform.position - transform.position;
+            if (toborToMeetingPoint.magnitude < toborMeetingPointRadius)
+                return;
+            else
+            {
+                maxRadiansDelta = Time.deltaTime * turnSpeed;
+                targetDirection = toborToMeetingPoint.normalized;
+            }
         } else
         {
             // normal (non-chased) behavior
