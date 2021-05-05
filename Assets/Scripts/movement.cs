@@ -17,7 +17,6 @@ public class movement : MonoBehaviour
     public float idleSpeed = 4f;
     public InputAction joystick;
     public InputAction reset;
-    private Vector3 moveDirection = Vector3.zero;
 
     private float turnSpeed = 2f;
     
@@ -50,11 +49,6 @@ public class movement : MonoBehaviour
         speed = Mathf.Clamp(speed, -maxSpeed, maxSpeed);
         
         characterController.Move(transform.forward * (speed * Time.deltaTime));
-
-        if (moveDirection != Vector3.zero)
-        {
-            transform.forward = moveDirection;
-        }
 
         if (reset.triggered)
         {

@@ -46,13 +46,8 @@ public class ToborController : MonoBehaviour
         float maxRadiansDelta;
         
         Vector3 playerToTobor = (transform.position - player.transform.position);
-        // if close, set target direction to away from player
-        if (playerToTobor.magnitude <  40)
-        {
-            targetDirection = playerToTobor.normalized;
-            maxRadiansDelta = Time.deltaTime * turnSpeed;
-
-        } else if (inGarage)
+        
+        if (inGarage)
         {
             Vector3 toborToMeetingPoint = parkingSpot.transform.position - transform.position;
             maxRadiansDelta = Time.deltaTime * turnSpeed;
@@ -76,6 +71,11 @@ public class ToborController : MonoBehaviour
                 // not yet in parking spot -> go there
                 targetDirection = toborToMeetingPoint.normalized;
             }
+        } else if (playerToTobor.magnitude < 40) // if close, set target direction to away from player
+        {
+            targetDirection = playerToTobor.normalized;
+            maxRadiansDelta = Time.deltaTime * turnSpeed;
+
         } else
         {
             // normal (non-chased) behavior
