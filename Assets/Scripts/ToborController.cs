@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class ToborController : MonoBehaviour
@@ -20,12 +21,15 @@ public class ToborController : MonoBehaviour
     Vector3 targetDirection; // a normalized vector storing the direction the tobor wants to eventually face
 
     private bool inGarage = false;
+    private bool inParkingSpot = false;
+    private int parkingSpotIndex;
     private GameObject parkingSpot; 
 
     public void onEnterGarage(int parkingSpotIndex)
     {
         inGarage = true;
         parkingSpot = GameObject.Find(parkingSpotIndex.ToString());
+        this.parkingSpotIndex = parkingSpotIndex;
     }
 
     // Start is called before the first frame update
@@ -51,11 +55,25 @@ public class ToborController : MonoBehaviour
         } else if (inGarage)
         {
             Vector3 toborToMeetingPoint = parkingSpot.transform.position - transform.position;
+            maxRadiansDelta = Time.deltaTime * turnSpeed;
             if (toborToMeetingPoint.magnitude < toborMeetingPointRadius)
-                return;
+            {
+                // if in parking spot, rotate to face wall
+                Vector3 wallVector = Vector3.right;
+                transform.forward = Vector3.RotateTowards(transform.forward, wallVector, maxRadiansDelta, 0);
+                
+                // if done rotating and this is the last tobor, end the game
+                if ((transform.forward - wallVector).magnitude < 0.1 && parkingSpotIndex >= ScoreController.MaxTobors - 1)
+                {
+                    TimerController.Instance.Stopwatch.Stop();
+                    SceneManager.LoadScene("EndScene");
+                }
+
+                return; // no more moving from meeting point
+            }
             else
             {
-                maxRadiansDelta = Time.deltaTime * turnSpeed;
+                // not yet in parking spot -> go there
                 targetDirection = toborToMeetingPoint.normalized;
             }
         } else

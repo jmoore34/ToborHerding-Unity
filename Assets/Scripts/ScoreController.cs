@@ -11,7 +11,7 @@ public class ScoreController : MonoBehaviour
     public static ScoreController Instance { get; private set; }
 
 
-    public int MaxTobors;
+    public static int MaxTobors = 6;
 
     private TextMeshProUGUI textMesh;
     private int _score;

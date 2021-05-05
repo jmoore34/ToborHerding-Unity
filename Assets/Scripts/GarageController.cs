@@ -13,11 +13,6 @@ public class GarageController : MonoBehaviour
         {
             toborController.onEnterGarage(ScoreController.Instance.Score); // i.e. 0th tobor gets parking spot index 0, and so on
             ScoreController.Instance.Score++;
-            if (ScoreController.Instance.Score >= ScoreController.Instance.MaxTobors)
-            {
-                TimerController.Instance.Stopwatch.Stop();
-                SceneManager.LoadScene("EndScene");
-            }
         }
     }
 }
