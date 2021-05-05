@@ -12,9 +12,11 @@ public class ToborController : MonoBehaviour
 
 
 
-    public float turnSpeed = 1;
-    public float moveSpeed = 0.5f;
-    public float changeDirThreshold = 1f;
+    float turnSpeed = 5;
+    float avoidanceTurnSpeed = 1.5f; // speed to turn when avoid player
+    float moveSpeed = 15f;
+    float changeDirThreshold = 1f;
+    Vector3 targetDirection; // a normalized vector storing the direction the tobor wants to eventually face
 
     private bool inGarage = false;
 
@@ -23,38 +25,47 @@ public class ToborController : MonoBehaviour
         inGarage = true;
     }
 
-    //public Vector3 targetRotation = Vector3.zero;
-    public float targetRotation = 0f;
+
 
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        targetDirection = transform.forward.normalized;
     }
 
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-
         if (inGarage)
             return;
 
-        if (Math.Abs(distance) <  Random.Range(30, 60))
+        float maxRadiansDelta;
+        
+        Vector3 playerToTobor = (transform.position - player.transform.position);
+        // if close, set target direction to away from player
+        if (playerToTobor.magnitude <  40)
         {
-            Vector3 vectorToPlayer = (transform.position - player.transform.position);
-            Vector3 playerPos = player.transform.position;
-            float degree = (float)(Math.PI * 0.25);
-            Vector3.RotateTowards(vectorToPlayer, playerPos, degree, 1);
-            controller.SimpleMove(vectorToPlayer*moveSpeed);
-            transform.forward = vectorToPlayer;
-            Debug.Log("near player");
+            targetDirection = playerToTobor.normalized;
+            maxRadiansDelta = Time.deltaTime * turnSpeed;
+
         } else
         {
-            // go to random vector
-            Vector3 targetPosition = new Vector3(Random.Range(-100, 100), 0, Random.Range(-100, 100));
-            transform.Translate(targetPosition);
-            controller.SimpleMove(transform.forward * moveSpeed);
+            // normal (non-chased) behavior
+            maxRadiansDelta = Time.deltaTime * avoidanceTurnSpeed;
+            
+            if ((targetDirection - transform.forward).magnitude < changeDirThreshold)
+            {
+                // target direction met, time to choose a new direction
+                targetDirection = Quaternion.Euler(0, Random.Range(-45, 45), 0) * targetDirection;
+            }
         }
+        
+        
+        // now rotate towards the targetDirection
+        transform.forward = Vector3.RotateTowards(transform.forward, targetDirection, maxRadiansDelta, 0);
+
+        // now that the rotation has been set, move forward
+        controller.SimpleMove(transform.forward * moveSpeed);
     }
 }
