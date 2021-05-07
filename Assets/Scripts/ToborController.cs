@@ -55,7 +55,7 @@ public class ToborController : MonoBehaviour
             {
                 // if in parking spot, rotate to face wall
                 Vector3 wallVector = Vector3.right;
-                transform.forward = Vector3.RotateTowards(transform.forward, wallVector, maxRadiansDelta, 0);
+                transform.forward = Vector3.RotateTowards(transform.forward, wallVector, maxRadiansDelta * Time.deltaTime, 0);
                 
                 // if done rotating and this is the last tobor, end the game
                 if ((transform.forward - wallVector).magnitude < 0.1 && parkingSpotIndex >= ScoreController.MaxTobors - 1)
